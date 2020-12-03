@@ -7,6 +7,5 @@ jobs:
       - checkout
       - run: sudo composer self-update --1
       - run: composer install -n --prefer-dist --working-dir=./laravel-ci2/
-      - run:
-          name: php test
-          command: laravel-ci2/vendor/bin/phpunit
+      - run: php ./laravel-ci2/artisan --env=testing
+      - run: php ./laravel-ci2/vendor/bin/phpunit --configuration=./laravel-ci2/phpunit.xml
