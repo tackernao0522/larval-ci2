@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/', 'ArticleController@index');
+Route::get('/', 'ArticleController@index')->name('articles.index');
