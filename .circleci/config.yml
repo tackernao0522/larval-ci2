@@ -11,4 +11,4 @@ jobs:
       - run: php ./laravel-ci2/vendor/bin/phpunit --configuration=./laravel-ci2/phpunit.xml
       - run:
           name: php test
-          command: vendor/bin/phpunit
+          command: laravel-ci2/vendor/bin/phpunit
