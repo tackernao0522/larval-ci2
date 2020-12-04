@@ -33,5 +33,6 @@ jobs:
             sudo apt-get install libpq-dev
             sudo docker-php-ext-install pdo_pgsql
             dockerize -wait tcp://localhost:5432 -timeout 1m
-      - run: php ./laravel-ci2/artisan --env=testing
-      - run: php ./laravel-ci2/vendor/bin/phpunit --configuration=./laravel-ci2/phpunit.xml
+      - run:
+          name: php test
+          command: php ./laravel-ci2/vendor/bin/phpunit --configuration=./laravel-ci2/phpunit.xml
