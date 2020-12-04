@@ -36,4 +36,4 @@ jobs:
       - run: php ./laravel-ci2/artisan --env=testing
       - run:
           name: php test
-          command: /ci-tutorial2/laravel-ci2/vendor/bin/phpunit
+          command: ./laravel-ci2/vendor/bin/phpunit
