@@ -18,4 +18,9 @@ class ArticleController extends Controller
     {
         return view('articles.create');
     }
+
+    public function store(Request $request)
+    {
+        
+    }
 }
