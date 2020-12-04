@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
     public function index()
     {
         $articles = Article::all()->sortByDesc('created_at');
-        // dd($articles);
         return view('articles.index', ['articles' => $articles]);
     }
 
@@ -19,8 +19,12 @@ class ArticleController extends Controller
         return view('articles.create');
     }
 
-    public function store(Request $request)
+    public function store(ArticleRequest $request, Article $article)
     {
-        
+        $article->fill($request->all());
+        $article->user_id = $request->user()->id;
+        $article->save();
+
+        return redirect()->route('articles.index');
     }
 }
