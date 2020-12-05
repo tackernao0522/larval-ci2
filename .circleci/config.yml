@@ -27,7 +27,7 @@ jobs:
           paths:
             - ./laravel-ci2/vendor
       - run: npm ci --cwd ./laravel-ci2/
-      - run: npm run dev
+      - run: npm run dev --cwd ./laravel-ci2/
       - run:
           name: get ready for postgres
           command: |
