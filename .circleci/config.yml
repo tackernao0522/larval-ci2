@@ -31,7 +31,7 @@ jobs:
       - run:
           name: npm ci
           command: |
-            if [ ! -d node_modules ]; then
+            if [ ! -d ./laravel-ci2/node_modules ]; then
               cd laravel-ci2/; npm ci
             fi
       - save_cache:
