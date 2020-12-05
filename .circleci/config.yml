@@ -26,7 +26,7 @@ jobs:
           key: composer-v1-{{ checksum "./laravel-ci2/composer.lock" }}
           paths:
             - ./laravel-ci2/vendor
-      - run: npm ci --cwd ./laravel-ci2
+      - run: yarn install --cwd ./laravel-ci2
       - run: npm run dev
       - run:
           name: get ready for postgres
