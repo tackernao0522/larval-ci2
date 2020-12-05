@@ -18,7 +18,7 @@ class Article extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function articles(): BelongsToMany
+    public function likes(): BelongsToMany
     {
         return $this->belongsToMany('App\User', 'likes')->withTimestamps();
     }
