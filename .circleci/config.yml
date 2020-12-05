@@ -32,7 +32,7 @@ jobs:
           name: npm ci
           command: |
             if [ ! -d ./laravel-ci2/node_modules ]; then
-              npm ci
+              cd laravel-ci2/; npm ci
             fi
       - save_cache:
           key: npm-v1-{{ checksum "./laravel-ci2/package-lock.json" }}
