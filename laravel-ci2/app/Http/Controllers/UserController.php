@@ -30,7 +30,7 @@ class UserController extends Controller
         return ['name' => $name];
     }
 
-    public function unfollow(Request $requst, string $name)
+    public function unfollow(Request $request, string $name)
     {
         $user = User::where('name', $name)->first();
 
