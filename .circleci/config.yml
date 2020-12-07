@@ -72,13 +72,13 @@ jobs:
           name: npm ci
           command: |
             if [ ! -d ./laravel-ci2/node_modules ]; then
-              npm ci
+              cd laravel-ci2/; npm ci
             fi
       - save_cache:
           key: npm-v1-{{ checksum "./laravel-ci2/package-lock.json" }}
           paths:
             - ./laravel-ci2/node_modules
-      - run: npm run prod
+      - run: cd laravel-ci2/; npm run prod
       - run:
           name: archive artifacts
           command: zip -ryq laravel-ci.zip .
