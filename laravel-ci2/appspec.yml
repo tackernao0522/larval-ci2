@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/webapp/laravel-ci
+    destination: /home/webapp/laravel-ci/laravel-ci2
 
 permissions:
-  - object: /home/webapp/laravel-ci
+  - object: /home/webapp/laravel-ci/laravel-ci2
     owner: webapp
     group: webapp
 
