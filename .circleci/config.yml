@@ -81,7 +81,7 @@ jobs:
       - run: cd laravel-ci2/; npm run prod
       - run:
           name: archive artifacts
-          command: zip -ryq laravel-ci.zip .
+          command: cd laravel-ci2/; zip -ryq laravel-ci.zip .
       - aws-cli/install
       - run:
           name: upload artifacts to s3
