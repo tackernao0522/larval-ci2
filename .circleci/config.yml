@@ -61,7 +61,7 @@ jobs:
       - run: sudo composer self-update --1
       - restore_cache:
           key: composer-no-dev-v1-{{ checksum "./laravel-ci2/composer.lock" }}
-      - run: composer install -n --no-dev --prefer-dist
+      - run: composer install -n --no-dev --prefer-dist --working-dir=./laravel-ci2/
       - save_cache:
           key: composer-no-dev-v1-{{ checksum "composer.lock" }}
           paths:
