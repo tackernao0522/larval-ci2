@@ -13,4 +13,4 @@ hooks:
   AfterInstall:
     - location: ./laravel-ci2/scripts/after_install.sh
       timeout: 60
-      runas: webapp
+      runas: webapp/laravel-ci/laravel-ci2
