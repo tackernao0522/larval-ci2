@@ -4,12 +4,12 @@ phases:
   install:
     commands:
       - composer install -n --no-dev --prefer-dist --prefer-dist --working-dir=./laravel-ci2/
-      - npm ci
+      - cd laravel-ci2/; npm ci
 
   build:
     commands:
-      - npm run prod
+      - cd laravel-ci2/; npm run prod
 
 artifacts:
   files:
-    - './**/*'
+    - './laravel-ci2/**/*'
