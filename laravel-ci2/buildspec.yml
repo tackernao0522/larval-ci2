@@ -3,12 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - composer install -n --no-dev --prefer-dist
-      - npm ci
+      - composer install -n --no-dev --prefer-dist --working-dir=./laravel-ci2/
+      - cd laravel-ci2/; npm ci
 
   build:
     commands:
-      - npm run prod
+      - cd laravel-ci2/; npm run prod
 
 artifacts:
   files:
