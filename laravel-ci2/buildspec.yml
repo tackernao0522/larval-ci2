@@ -12,4 +12,4 @@ phases:
 
 artifacts:
   files:
-    - './laravel-ci2/**/*'
+    - cd laravel-ci2/; './**/*'
