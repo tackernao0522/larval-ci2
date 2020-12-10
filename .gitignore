@@ -1,4 +1,3 @@
 .idea
 
 data/postgres/*
-laravel-ci2/config/very_basic_auth.php
