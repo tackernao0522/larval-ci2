@@ -5,14 +5,14 @@
      */
     return [
         // Username
-        'user'              => 'takanao',
+        'user'              => env('BASIC_USER'),
 
         // Password
-        'password'          => '5t5a7k3a',
+        'password'          => env('BASIC_PASSWORD'),
 
         // Environments where the middleware is active. Use "*" to protect all envs
         'envs'              => [
-            'production'
+            '*'
         ],
 
         // Message to display if the user "opts out"/clicks "cancel"
